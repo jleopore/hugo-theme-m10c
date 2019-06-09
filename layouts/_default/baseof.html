@@ -25,6 +25,11 @@
           <a target="_blank" href="{{ .url }}">{{ partial "icon.html" (dict "ctx" $ "name" .name ) }}</a>
         {{ end }}
       </div>
+      <div class="app-header-tag-list">
+          {{ range .Site.Taxonomies.tags }}
+            <a class="tag" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+          {{ end }}
+      </div>
     </header>
     <main class="app-container">
       {{ block "main" . }}

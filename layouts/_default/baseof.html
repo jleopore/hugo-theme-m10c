@@ -8,7 +8,7 @@
     <meta name="author" content="{{ .Site.Params.author | default "John Doe" }}" />
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
     {{ $combinedStyle := slice (resources.Get "main.css") (resources.Get "extra.css") | resources.Concat "_.css" }}
-    {{ $style := $combinedStyle | resources.ExecuteAsTemplate "main.css" . | resources.Minify | fingerprint }}
+    {{ $style := $combinedStyle | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
     {{ template "_internal/google_analytics.html" . }}

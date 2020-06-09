@@ -1,0 +1,192 @@
+:root 
+{
+  --darkest-color: {{ .Site.Params.style.darkestColor | default "#242930" }};
+  --dark-color: {{ .Site.Params.style.darkColor | default "#353b43" }};
+  --light-color: {{ .Site.Params.style.lightColor | default "#afbac4" }};
+  --lightest-color: {{ .Site.Params.style.lightestColor | default "#ffffff" }};
+  --primary-color: {{ .Site.Params.style.primaryColor | default "#57cc8a" }};
+}
+
+/* ======== General Appearance ======== */
+
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  font: 1em/1.6 sans-serif;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  color: var(--lightest-color); 
+}
+
+/* ======== Links and Text Selection ======== */
+
+a {
+  color: var(--primary-color);
+  transition: color 0.35s;
+  text-decoration: none;
+}
+
+a:hover { 
+  color: var(--lightest-color); 
+}
+
+::selection, ::-moz-selection { 
+  background: rgba(var(--light-color), .25); 
+}
+
+/* ======== Code Blocks and Preformatted Text ======== */
+
+/* Browsers seem to use a smaller default font-size with monospaced code */
+/* blocks (like 80% of the size of normal text) and that looks pretty bad with */
+/* small inline code-blocks in the middle of normal text (mainly because of */
+/* the very noticeable difference in x-height). This CSS corrects that problem. */
+code {
+  font-family: monospace,monospace;
+  font-size: 1em;
+  color: rgba(var(--light-color), .8);
+}
+
+pre { overflow: auto; }
+
+/* A larger monospaced block of text (that isn't mixed with normal text) */
+/* generally looks heavier than normal text with the same font size. For this */
+/* reason using a smaller monospaced font size makes sense in this situation. */
+pre code { font-size: .8em; }
+
+
+.app-header {
+  padding: 2.5em;
+  background: var(--darkest-color);
+  text-align: center;
+}
+
+.app-header-avatar {
+  max-width: 15rem;
+  max-height: 15rem;
+  border-radius: 100%;
+  border: 0.5rem solid var(--primary-color);
+}
+
+.app-container {
+  padding: 2.5rem;
+}
+
+.app-header-social {
+  font-size: 2em;
+  color: var(--lightest-color);
+}
+.app-header-social a {
+  margin: 0 0.1em;
+}
+
+.app-header-tag-list {
+  padding: .5rem;
+}
+
+.error-404 {
+  text-align: center;
+}
+
+.error-404-title {
+  text-transform: uppercase;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.pagination {
+  display: block;
+  list-style: none;
+  padding: 0;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 3em 0;
+}
+
+.page-item { 
+  display: inline-block; 
+}
+  
+.page-item .page-link {
+    display: block;
+    padding: 0.285em 0.8em;
+  }
+
+.page-item.active .page-link {
+  color: var(--lightest-color);
+  border-radius: 2em;
+  background: var(--primary-color);
+}
+
+.post-title {
+  color: var(--lightest-color);
+}
+
+.post-content pre {
+  border-left: 0.4em solid rgba(var(--primary-color), .8);
+  padding-left: 1em;
+}
+
+.post-meta {
+  font-size: 0.8em;
+}
+
+.posts-list {
+  padding: 0;
+}
+
+.posts-list-item {
+  list-style: none;
+  padding: 0.4em 0;
+}
+
+.posts-list-item:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.posts-list-item-description {
+  display: block;
+  font-size: 0.8em;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 0.2em;
+  padding: 0 0.6em;
+  font-size: 0.9em;
+  border-radius: 0.2em;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.1);
+  transition: color 0.35s, background 0.35s;
+}
+.tag:hover {
+  transition: color 0.25s, background 0.05s;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* App Header becomes a left-side column on wide screens */
+
+@media (min-width: 940px) {
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    min-height: 100vh;
+  }
+
+  .app-container {
+    max-width: 65rem;
+    margin-left: 20rem;
+  }
+}

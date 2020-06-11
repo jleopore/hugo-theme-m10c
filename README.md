@@ -61,4 +61,4 @@ This theme is released under the [**MIT**](/LICENSE.md) License.
 
 ## Acknowledgements
 
-- [feather](https://feathericons.com/) - [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
+- [feather](https://feathericons.com/) - [MIT](https://github.com/feathericons/feather/blob/master/LICENSE) [<sup>(download as json)</sup>](https://unpkg.com/feather-icons/dist/icons.json)

@@ -1,0 +1,1 @@
+#### You can get the latest icon data from https://unpkg.com/feather-icons/dist/icons.json.

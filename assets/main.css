@@ -36,10 +36,6 @@ a:hover {
   color: var(--lightest-color); 
 }
 
-::selection, ::-moz-selection { 
-  background: rgba(var(--light-color), .25); 
-}
-
 /* ======== Code Blocks and Preformatted Text ======== */
 
 /* Browsers seem to use a smaller default font-size with monospaced code */

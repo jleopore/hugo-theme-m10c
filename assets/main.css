@@ -141,7 +141,6 @@ pre code { font-size: .8em; }
   list-style: none;
   padding: 0.4em 0;
 }
-
 .posts-list-item:not(:last-child) {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
 }
@@ -164,6 +163,37 @@ pre code { font-size: .8em; }
 .tag:hover {
   transition: color 0.25s, background 0.05s;
   background: rgba(255, 255, 255, 0.3);
+}
+
+.tags-list {
+  padding: 0;
+}
+
+.tags-list-item {
+  list-style: none;
+  padding: 0.4em 0;
+}
+.tags-list-item:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* Terms pages get two columns when the screen is wide enough */
+
+@media (min-width: 450px) {
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tags-list-item {
+    width: calc(50% - 1em);
+  }
+  .tags-list-item:nth-child(even) {
+    margin-left: 1em;
+  }
+  .tags-list-item:nth-last-child(2) {
+    border: none;
+  }
 }
 
 /* App Header becomes a left-side column on wide screens */

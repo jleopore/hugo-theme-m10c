@@ -2,7 +2,13 @@
 
 ![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
 
-A Hugo minimalistic theme for bloggers
+A Hugo minimalistic theme for bloggers.
+
+## Fork details
+
+This fork generally tracks the [upstream repo](https://github.com/vaga/hugo-theme-m10c), but with the following changes:
+- Uses vanilla css instead of Sass. This allows you to modify and override the stylesheets with a regular hugo installation rather than hugo_extended, which includes a Sass parser.
+- Adds clickable tags to the header, as a navigation aid.
 
 ## Getting started
 
@@ -43,7 +49,7 @@ To add a menu item, add the following lines in `menu`:
   url = "/tags/"
 ```
 
-[Read Hugo documentations](https://gohugo.io/content-management/menus/#readout) for more informations about menu
+For more details about menus, see [the hugo docs](https://gohugo.io/content-management/menus/#readout).
 
 To add a social link, add the following lines in `params`:
 

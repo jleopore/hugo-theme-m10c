@@ -8,7 +8,7 @@ A Hugo minimalistic theme for bloggers.
 
 This fork generally tracks the [upstream repo](https://github.com/vaga/hugo-theme-m10c), but with the following changes:
 - Uses vanilla css instead of Sass. This allows you to modify and override the stylesheets with a regular hugo installation rather than hugo_extended, which includes a Sass parser.
-- Adds clickable tags to the header, as a navigation aid.
+- Removes unneeded shell script and compiled resources
 
 ## Getting started
 

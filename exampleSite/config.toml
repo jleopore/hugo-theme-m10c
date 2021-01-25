@@ -4,9 +4,20 @@ themesDir = "../.."
 theme = "m10c"
 paginate = 5
 
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+
 [params]
   author = "John Doe"
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium."
+  menu_item_separator = " - "
   [[params.social]]
     name = "github"
     url = "https://github.com/gohugoio"

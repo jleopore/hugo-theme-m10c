@@ -48,7 +48,12 @@ code {
   color: rgba(var(--light-color), .8);
 }
 
-pre { overflow: auto; }
+pre {
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0;
+  overflow: auto; 
+}
 
 /* A larger monospaced block of text (that isn't mixed with normal text) */
 /* generally looks heavier than normal text with the same font size. For this */
@@ -124,9 +129,16 @@ pre code { font-size: .8em; }
   color: var(--lightest-color);
 }
 
-.post-content pre {
+.post-content > pre { 
+  margin: 1em 0;  
   border-left: 0.4em solid rgba(var(--primary-color), .8);
-  padding-left: 1em;
+  padding: .5em 1em;  
+}
+.post-content .highlight { margin: 1em 0;}
+
+.post-content .highlight > pre, .post-content .highlight > div {
+  border-left: 0.4em solid rgba(var(--primary-color), .8);
+  padding: .5em 1em; 
 }
 
 .post-meta {
